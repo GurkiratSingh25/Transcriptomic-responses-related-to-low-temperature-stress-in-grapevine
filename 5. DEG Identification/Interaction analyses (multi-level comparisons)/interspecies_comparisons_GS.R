@@ -30,12 +30,10 @@ setwd("C:/Users/singh.1815/OneDrive - The Ohio State University/Gurkirat Singh/M
 #GREM4
 #data <- read.table("countmatrix_IH.txt", header=T, row.names=1, com='', quote='', check.names=F, sep="\t")
 
-#PN
-#data <- read.table("countmatrix_IH_PN.txt", header=T, row.names=1, com='', quote='', check.names=F, sep="\t")
+
 
 
 #Inter-species Comparisons
-#data <- read.table("countmatrix_IH_collinearity_GREM4_PN_sorted.txt", header=T, row.names=1, com='', quote='', check.names=F, sep="\t")
 data <- read.table("countmatrix_orthology_GREM4_CabSav_sorted.txt", header=T, row.names=1, com='', quote='', check.names=F, sep="\t")
 
 
@@ -64,72 +62,11 @@ if(TRUE) {
   #     ^ example from the transcriptome by tissue analysis
   #                 \/ must be written exactly as done in the '...Cond.Input.File.txt' files
   
-  #Do just one
-  #allname <- list("GREM_H_1_v_GREM_H_0")
-  
-  #Do all of them intra GREM4
-  #allname <- list("GREM_C_1_v_GREM_H_1","GREM_C_1_v_GREM_H_0","GREM_H_0_v_GREM_H_4","GREM_H_0_v_GREM_H_30","GREM_H_1_v_GREM_C_1","GREM_H_1_v_GREM_H_0","GREM_H_1_v_GREM_H_30","GREM_C_4_v_GREM_H_0","GREM_C_30_v_GREM_H_0","GREM_C_30_v_GREM_H_30","GREM_H_0_v_GREM_H_1","GREM_H_1_v_GREM_H_4","GREM_H_4_v_GREM_H_0","GREM_H_4_v_GREM_H_1","GREM_H_4_v_GREM_H_30","GREM_H_30_v_GREM_H_0","GREM_H_30_v_GREM_H_1","GREM_H_30_v_GREM_H_4","GREM_H_30_v_GREM_C_30","GREM_C_4_v_GREM_H_4","GREM_H_4_v_GREM_C_4","GREM_H_0_v_GREM_C_30","GREM_H_0_v_GREM_C_1","GREM_H_0_v_GREM_C_4")
-  
-  #Do all non-problematic GREM4
-  #allname <- list("GREM_C_1_v_GREM_H_0","GREM_H_0_v_GREM_H_4","GREM_H_0_v_GREM_H_30","GREM_H_1_v_GREM_H_0","GREM_C_4_v_GREM_H_0","GREM_C_30_v_GREM_H_0","GREM_C_30_v_GREM_H_30","GREM_H_0_v_GREM_H_1","GREM_H_1_v_GREM_H_4","GREM_H_4_v_GREM_H_0","GREM_H_4_v_GREM_H_1","GREM_H_4_v_GREM_H_30","GREM_H_30_v_GREM_H_0","GREM_H_30_v_GREM_H_4","GREM_H_30_v_GREM_C_30","GREM_C_4_v_GREM_H_4","GREM_H_4_v_GREM_C_4","GREM_H_0_v_GREM_C_30","GREM_H_0_v_GREM_C_1","GREM_H_0_v_GREM_C_4")
-  
-  #Problematic but completed GREM4 (don't have any up or down regulated genes)
-  
-  #No Up-regulated Genes
-  #"GREM_C_1_v_GREM_H_1"
-  
-  #No Down-regulated Genes
-  #"GREM_H_1_v_GREM_C_1"
-  
-  #No Up or Down-regulated Genes
-  #"GREM_H_1_v_GREM_H_30"
-  #"GREM_H_30_v_GREM_H_1"
-  
-  
-  
-  
-  #Do all of them intra PN
-  #allname <- list("PN_H_30_v_PN_H_0","PN_H_30_v_PN_H_1","PN_C_30_v_PN_H_0","PN_H_1_v_PN_H_0","PN_H_1_v_PN_H_30","PN_C_1_v_PN_H_0","PN_H_4_v_PN_H_0","PN_H_30_v_PN_H_4","PN_C_4_v_PN_H_0","PN_H_0_v_PN_H_30","PN_H_4_v_PN_H_30","PN_H_0_v_PN_C_30","PN_H_0_v_PN_H_1","PN_H_1_v_PN_H_4","PN_H_0_v_PN_C_1","PN_H_0_v_PN_H_4","PN_H_4_v_PN_H_1","PN_H_0_v_PN_C_4","PN_H_30_v_PN_C_30","PN_H_1_v_PN_C_1","PN_H_4_v_PN_C_4","PN_C_30_v_PN_H_30","PN_C_1_v_PN_H_1","PN_C_4_v_PN_H_4")
-  
-  #Do the select list of intra PN
-  #allname <- list("PN_H_30_v_PN_H_0","PN_H_1_v_PN_H_0","PN_H_4_v_PN_H_0","PN_H_30_v_PN_C_30","PN_H_1_v_PN_C_1","PN_H_4_v_PN_C_4","PN_H_1_v_PN_H_30","PN_H_4_v_PN_H_30","PN_H_4_v_PN_H_1","PN_C_30_v_PN_H_0","PN_C_1_v_PN_H_0","PN_C_4_v_PN_H_0")
-  
-  #Do all non-problematic PN
-  #allname <- list("PN_H_30_v_PN_H_0","PN_H_1_v_PN_H_0","PN_H_4_v_PN_H_0","PN_H_4_v_PN_H_30","PN_H_4_v_PN_H_1","PN_C_30_v_PN_H_0","PN_C_1_v_PN_H_0","PN_C_4_v_PN_H_0")
-  
-  #Problematic but completed PN (don't have any up or down regulated genes)
-  
-  #No Up-regulated Genes
-  #None
-  
-  #No Down-regulated Genes
-  #"PN_H_30_v_PN_C_30"
-  #"PN_H_1_v_PN_C_1"
-  #"PN_H_4_v_PN_C_4"
-  
-  #"PN_H_1_v_PN_H_30"
-  
-  
-  
-  
-  #Do all of them inter
-  #allname <- list("GREM_H_0_v_PN_H_0","GREM_H_30_v_PN_H_30","GREM_H_1_v_PN_H_1","GREM_H_4_v_PN_H_4")
-  
-  #Do literally all of them
-  #allname <- list("GREM_C_1_v_GREM_H_0","GREM_C_1_v_GREM_H_1","GREM_C_4_v_GREM_H_0","GREM_C_4_v_GREM_H_4","GREM_C_30_v_GREM_H_0","GREM_C_30_v_GREM_H_30","GREM_H_0_v_GREM_H_1","GREM_H_0_v_GREM_H_4","GREM_H_0_v_GREM_H_30","GREM_H_0_v_PN_H_0","GREM_H_1_v_GREM_C_1","GREM_H_1_v_GREM_H_0","GREM_H_1_v_GREM_H_4","GREM_H_1_v_GREM_H_30","GREM_H_1_v_PN_H_1","GREM_H_4_v_GREM_C_4","GREM_H_4_v_GREM_H_0","GREM_H_4_v_GREM_H_1","GREM_H_4_v_GREM_H_30","GREM_H_4_v_PN_H_4","GREM_H_30_v_GREM_C_30","GREM_H_30_v_GREM_H_0","GREM_H_30_v_GREM_H_1","GREM_H_30_v_GREM_H_4","GREM_H_30_v_PN_H_30","PN_C_1_v_PN_H_0","PN_C_4_v_PN_H_0","PN_C_30_v_PN_H_0","PN_H_0_v_GREM_H_0","PN_H_0_v_PN_H_1","PN_H_0_v_PN_H_4","PN_H_0_v_PN_H_30","PN_H_1_v_GREM_H_1","PN_H_1_v_PN_C_1","PN_H_1_v_PN_H_0","PN_H_1_v_PN_H_4","PN_H_1_v_PN_H_30","PN_H_4_v_GREM_H_4","PN_H_4_v_PN_C_4","PN_H_4_v_PN_H_0","PN_H_4_v_PN_H_1","PN_H_4_v_PN_H_30","PN_H_30_v_GREM_H_30","PN_H_30_v_PN_C_30","PN_H_30_v_PN_H_0","PN_H_30_v_PN_H_1","PN_H_30_v_PN_H_4","GREM_H_0_v_GREM_C_30","GREM_H_0_v_GREM_C_1","GREM_H_0_v_GREM_C_4")
-  #  Experimental Sample /\       /\ Control Sample      !!!!!!!!!!!!
-  
-  
+ 
   
   #Do multi-level comparisons
-  #allname <- list("GREM_H_30_v_GREM_H_0_x_PN_H_30_v_PN_H_0","GREM_H_1_v_GREM_H_0_x_PN_H_1_v_PN_H_0","GREM_H_4_v_GREM_H_0_x_PN_H_4_v_PN_H_0")
   #allname <- list("GREM_Chill_v_GREM_Control_x_CabSav_Chill_v_CabSav_Control")
   allname <- list("GREM_Freeze_v_GREM_Control_x_CabSav_Freeze_v_CabSav_Control")
-  
-  
-  
-  #Do a subset
-  #allname <- list("PN_H_4_v_PN_H_30","PN_H_4_v_PN_H_1","PN_C_30_v_PN_H_0","PN_C_1_v_PN_H_0","PN_C_4_v_PN_H_0")
   
   
   
