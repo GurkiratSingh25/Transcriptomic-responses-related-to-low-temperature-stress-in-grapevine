@@ -1,0 +1,7 @@
+It is critically important that all of the count matrix file names, all of the column headers in 
+the count matrix, and all of the condition matrix file names for all of your various samples are 
+perfectly exactly the same. If they are not exactly the same, my scripts from here on out will 
+not work as they take into account the file names and use the file names in order to expedite the 
+process by using for loops and searching for those file names as the names of the samples which 
+need to correspond to the various inputs in the various files which need to correspond to the 
+various datasets accordingly.
