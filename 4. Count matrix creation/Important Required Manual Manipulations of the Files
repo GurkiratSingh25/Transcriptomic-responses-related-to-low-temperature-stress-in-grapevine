@@ -1,3 +1,5 @@
+#Originally written by: Cullen W. Dixon
+
 Step 1 - 
 Manually add in " gene_biotype vitis_labrusca;" to the end of column 9 lines which contain the word "gene" in the 3rd column.
 You can put in any genus_species.
