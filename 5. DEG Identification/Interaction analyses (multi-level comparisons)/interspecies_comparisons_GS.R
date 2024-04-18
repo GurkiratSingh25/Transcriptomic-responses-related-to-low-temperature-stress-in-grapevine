@@ -25,13 +25,6 @@ library(gridExtra)
 setwd("C:/Users/singh.1815/OneDrive - The Ohio State University/Gurkirat Singh/MS Degree outline/Aim1/DESeq/Interspecies comparisons")
 
 
-##Feed in your data
-
-#GREM4
-#data <- read.table("countmatrix_IH.txt", header=T, row.names=1, com='', quote='', check.names=F, sep="\t")
-
-
-
 
 #Inter-species Comparisons
 data <- read.table("countmatrix_orthology_GREM4_CabSav_sorted.txt", header=T, row.names=1, com='', quote='', check.names=F, sep="\t")
