@@ -43,7 +43,4 @@ STAR --runMode genomeGenerate \
 #					case of reads of varying length, the ideal value is max(ReadLength)-1. In most cases, 
 #					the default value of 100 will work as well as the ideal value." - Manual
 #
-#					In looking at 5 qc reports, the reads all ran from 36-150bps in size.  Rachel had previously
-#					been using 13 only, but I don't understand why she would be doing that based
-#					on what I am reading.  I am going to mention this to her and see what she was
-#					thinking with her 13 she used. - Cullen 10/31/22.
+#					In looking at 5 qc reports, the reads all ran from 36-150bps in size.  
